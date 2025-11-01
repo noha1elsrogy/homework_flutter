@@ -34,7 +34,7 @@ class HeightWeightCard extends StatelessWidget {
               children: [
                 ElevatedButton(
                   style: ElevatedButton.styleFrom(
-                      primary: Colors.grey,
+                      // primary: Colors.grey,
                       shape: CircleBorder(),
                       minimumSize: Size(50, 50)),
                   onPressed: () {},
@@ -48,9 +48,7 @@ class HeightWeightCard extends StatelessWidget {
                 ),
                 ElevatedButton(
                   style: ElevatedButton.styleFrom(
-                      primary: Colors.grey,
-                      shape: CircleBorder(),
-                      minimumSize: Size(50, 50)),
+                      shape: CircleBorder(), minimumSize: Size(50, 50)),
                   onPressed: () {},
                   child: Center(
                     child: Icon(
