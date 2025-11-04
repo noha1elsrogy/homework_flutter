@@ -1,9 +1,18 @@
 import 'package:flutter/material.dart';
+import 'package:task_note/models/Task%20App%20oop.dart';
 import 'package:task_note/no%20task%20section/no%20task%20section.dart';
 import 'package:task_note/task%20InputField%20Section/task%20Input%20Field%20Section.dart';
 
-class HomePage extends StatelessWidget {
-  const HomePage({super.key});
+class HomePage extends StatefulWidget {
+
+   HomePage({super.key});
+
+  @override
+  State<HomePage> createState() => _HomePageState();
+}
+
+class _HomePageState extends State<HomePage> {
+      TaskManager taskManager = TaskManager();
 
   @override
   Widget build(BuildContext context) {
@@ -20,9 +29,15 @@ class HomePage extends StatelessWidget {
         mainAxisAlignment: MainAxisAlignment.center,
         children: [
           Spacer(),
-          NoTasksView(),
+          taskManager.tasks.isEmpty ? NoTasksView() : ListTasks(),
           Spacer(),
-          taskInputFieldSection(),
+
+          taskInputFieldSection(
+            taskManager: taskManager,
+            onChanged: () {
+              setState(() {});
+            },
+          ),
           // Column(
           //   mainAxisAlignment: MainAxisAlignment.end,
           //   children: [taskInputFieldSection()],
@@ -30,5 +45,14 @@ class HomePage extends StatelessWidget {
         ],
       ),
     );
+  }
+}
+
+class ListTasks extends StatelessWidget {
+  const ListTasks({super.key});
+
+  @override
+  Widget build(BuildContext context) {
+    return const Placeholder();
   }
 }

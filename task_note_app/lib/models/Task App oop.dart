@@ -1,31 +1,38 @@
-class Task {
+import 'dart:ui';
+
+import 'package:equatable/equatable.dart';
+
+class Task extends Equatable {
   String title;
   DateTime dateTime;
-  Task({required this.title, required this.dateTime});
+  bool isCompleted = false;
+  Task({
+    required this.title,
+    required this.dateTime,
+    required this.isCompleted,
+  });
+
+  @override
+  // TODO: implement props
+  List<Object?> get props => [title, dateTime, isCompleted];
 }
 
-class ManageTasks {
+class TaskManager {
   List<Task> tasks = [];
 
-  void addTask(Task task) {
+  void addTask({required Task task}) {
     tasks.add(task);
   }
 
-  void updateTask(int index, Task newTask) {
-    if (index >= 0 && index < tasks.length) {
-      tasks[index] = newTask;
-    } else {
-      print('Invalid index');
-    }
+  void remove(Task task) {
+    tasks.remove(task);
   }
 
-  void clearTasks() {
-    tasks.clear();
+  void update(Task task, bool isCompleted) {
+    task.isCompleted = isCompleted;
   }
 
-  void displayTasks() {
-    for (var task in tasks) {
-      print(task);
-    }
+  List<Task> getTasks() {
+    return tasks;
   }
 }
