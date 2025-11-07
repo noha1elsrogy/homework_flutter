@@ -4,7 +4,7 @@ import 'package:quiz_app/models/Quiz.dart';
 class QuestionNumber extends StatelessWidget {
   const QuestionNumber({super.key, required this.quiz});
 
-  final Quiz quiz;
+  final Question quiz;
 
   @override
   Widget build(BuildContext context) {

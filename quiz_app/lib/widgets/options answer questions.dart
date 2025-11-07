@@ -5,7 +5,7 @@ import 'package:quiz_app/widgets/card%20answer%20question.dart';
 class OptionsQuestionsAnswers extends StatelessWidget {
   const OptionsQuestionsAnswers({super.key, required this.quiz});
 
-  final Quiz quiz;
+  final Question quiz;
 
   @override
   Widget build(BuildContext context) {

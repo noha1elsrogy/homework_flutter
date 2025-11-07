@@ -14,7 +14,7 @@ class BackAndNextSection extends StatelessWidget {
               backgroundColor: Colors.transparent,
               shadowColor: Colors.transparent,
               elevation: 0,
-              side: const BorderSide(color: Color(0xff5e579e), width: 2),
+              side: const BorderSide(color: Color(0xff849FFF), width: 2),
               shape: RoundedRectangleBorder(
                 borderRadius: BorderRadius.circular(12),
               ),
@@ -34,7 +34,7 @@ class BackAndNextSection extends StatelessWidget {
           flex: 3,
           child: ElevatedButton(
             style: ElevatedButton.styleFrom(
-              backgroundColor: const Color(0xff8f85ff),
+              backgroundColor: const Color(0xff849FFF),
               shadowColor: Colors.transparent,
               elevation: 0,
               side: const BorderSide(color: Colors.transparent),

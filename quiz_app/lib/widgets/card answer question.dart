@@ -6,10 +6,8 @@ class CardAnswerQuestion extends StatelessWidget {
   const CardAnswerQuestion({
     super.key,
     required this.answerText,
-    required this.quiz,
+    required Question quiz,
   });
-
-  final Quiz quiz;
 
   @override
   Widget build(BuildContext context) {

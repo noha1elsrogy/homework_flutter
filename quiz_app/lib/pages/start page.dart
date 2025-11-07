@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_svg/svg.dart';
 import 'package:quiz_app/pages/Questions%20page.dart';
 import 'package:quiz_app/widgets/Text%20and%20Style%20widget.dart';
 
@@ -7,16 +8,31 @@ class StartPage extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Container(
-      height: double.infinity,
-      width: double.infinity,
-      decoration: BoxDecoration(
-        gradient: RadialGradient(
-          colors: [Color(0xFFFFFFFF), Color(0xff2B0063)],
-          radius: 0.8,
+    return Stack(
+      children: [
+        Container(
+          height: double.infinity,
+          width: double.infinity,
+          decoration: BoxDecoration(
+            gradient: LinearGradient(
+              begin: Alignment.topLeft,
+              end: Alignment.bottomRight,
+              colors: [Color(0xFF060B26), Color(0xff1A1F37)],
+            ),
+          ),
+          // child: BodyStartPage(),
         ),
-      ),
-      child: BodyStartPage(),
+
+        Positioned.fill(
+          child: SvgPicture.asset(
+            'images/GRADINET.svg',
+
+            fit: BoxFit.cover,
+            alignment: Alignment.center,
+          ),
+        ),
+        BodyStartPage(),
+      ],
     );
   }
 }

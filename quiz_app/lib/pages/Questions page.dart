@@ -31,7 +31,7 @@ class QuestionsPage extends StatelessWidget {
 }
 
 class BodyQuestionsPage extends StatelessWidget {
-  Quiz quiz = Quiz(
+  Question quiz = Question(
     NumberQuestion: '1',
     question:
         'How would you describe your level of satisfaction with the healthcare system?',
