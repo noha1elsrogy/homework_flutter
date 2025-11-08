@@ -1,19 +1,13 @@
 import 'package:flutter/material.dart';
-import 'package:flutter/services.dart';
-import 'package:quiz_application/widgets/Body_start_screeen.dart';
+import 'package:quiz_application/screens/start_screen.dart';
+import 'package:quiz_application/widgets/Back_Next_Button_Section.dart';
+import 'package:quiz_application/widgets/Body_Question_Screen.dart';
 
-class StartScreen extends StatelessWidget {
-  const StartScreen({super.key});
+class QuestionScreen extends StatelessWidget {
+  const QuestionScreen({super.key});
 
   @override
   Widget build(BuildContext context) {
-    SystemChrome.setSystemUIOverlayStyle(
-      SystemUiOverlayStyle(
-        statusBarColor: Colors.transparent, // اللون اللي تحبيه
-        statusBarIconBrightness: Brightness.light,
-        // لون أيقونات الـ Status Bar
-      ),
-    );
     return Scaffold(
       body: Stack(
         children: [
@@ -32,8 +26,7 @@ class StartScreen extends StatelessWidget {
           Positioned.fill(
             child: Image.asset('assets/images/GRADINET.png', fit: BoxFit.cover),
           ),
-
-          BodyStartScreen(),
+          BodyQuestions(),
         ],
       ),
     );
