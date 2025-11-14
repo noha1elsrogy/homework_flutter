@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:quiz_application/screens/start_screen.dart';
-import 'package:quiz_application/widgets/Back_Next_Button_Section.dart';
+import 'package:quiz_application/models/quiz.dart';
+
 import 'package:quiz_application/widgets/Body_Question_Screen.dart';
 
 class QuestionScreen extends StatelessWidget {
@@ -8,6 +8,7 @@ class QuestionScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    Question question;
     return Scaffold(
       body: Stack(
         children: [
@@ -26,7 +27,7 @@ class QuestionScreen extends StatelessWidget {
           Positioned.fill(
             child: Image.asset('assets/images/GRADINET.png', fit: BoxFit.cover),
           ),
-          BodyQuestions(),
+          PageViewScreen(),
         ],
       ),
     );
