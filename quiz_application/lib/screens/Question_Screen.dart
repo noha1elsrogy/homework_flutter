@@ -1,14 +1,15 @@
 import 'package:flutter/material.dart';
 import 'package:quiz_application/models/quiz.dart';
 
-import 'package:quiz_application/widgets/Body_Question_Screen.dart';
+import 'package:quiz_application/widgets/options_secton/page_view.dart';
 
 class QuestionScreen extends StatelessWidget {
-  const QuestionScreen({super.key});
+  final QuestionManager questionManager;
+
+  const QuestionScreen({super.key, required this.questionManager});
 
   @override
   Widget build(BuildContext context) {
-    Question question;
     return Scaffold(
       body: Stack(
         children: [
@@ -27,7 +28,7 @@ class QuestionScreen extends StatelessWidget {
           Positioned.fill(
             child: Image.asset('assets/images/GRADINET.png', fit: BoxFit.cover),
           ),
-          PageViewScreen(),
+          PageViewScreen(questionManager: questionManager),
         ],
       ),
     );

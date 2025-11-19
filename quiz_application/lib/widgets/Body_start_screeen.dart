@@ -1,9 +1,11 @@
 import 'package:flutter/material.dart';
+import 'package:quiz_application/models/quiz.dart';
 import 'package:quiz_application/screens/Question_Screen.dart';
 import 'package:quiz_application/styles/Text_styles_app.dart';
 
 class BodyStartScreen extends StatelessWidget {
-  BodyStartScreen({super.key});
+  final QuestionManager questionManager;
+  BodyStartScreen({super.key, required this.questionManager});
 
   @override
   Widget build(BuildContext context) {
@@ -23,7 +25,10 @@ class BodyStartScreen extends StatelessWidget {
               onTap: () {
                 Navigator.push(
                   context,
-                  MaterialPageRoute(builder: (context) => QuestionScreen()),
+                  MaterialPageRoute(
+                    builder: (context) =>
+                        QuestionScreen(questionManager: questionManager),
+                  ),
                 );
               },
               child: Container(

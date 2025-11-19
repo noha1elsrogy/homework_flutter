@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
+import 'package:quiz_application/models/quiz.dart';
 import 'package:quiz_application/widgets/Body_start_screeen.dart';
 
 class StartScreen extends StatelessWidget {
@@ -33,7 +34,7 @@ class StartScreen extends StatelessWidget {
             child: Image.asset('assets/images/GRADINET.png', fit: BoxFit.cover),
           ),
 
-          BodyStartScreen(),
+          BodyStartScreen(questionManager: QuestionManager()),
         ],
       ),
     );

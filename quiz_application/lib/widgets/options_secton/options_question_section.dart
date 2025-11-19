@@ -1,6 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:quiz_application/models/quiz.dart';
-import 'package:quiz_application/widgets/options_secton/card_option_item.dart';
 
 class OptionsSection extends StatelessWidget {
   // String? chooseAnswer; //تبع ال Radio
@@ -11,5 +9,6 @@ class OptionsSection extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Column(children: optionSection);
+    // return ListView.builder(itemBuilder: (context, index) {});
   }
 }
