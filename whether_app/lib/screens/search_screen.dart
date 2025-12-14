@@ -1,8 +1,11 @@
 import 'package:flutter/material.dart';
 import 'package:whether_app/Widgets/text_field_section.dart';
+import 'package:whether_app/models/whether_model.dart';
 
 class SearchScreen extends StatelessWidget {
-  const SearchScreen({super.key});
+  const SearchScreen({
+    super.key,
+  });
 
   @override
   Widget build(BuildContext context) {

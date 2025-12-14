@@ -1,14 +1,23 @@
 import 'package:flutter/material.dart';
+import 'package:whether_app/Widgets/whether_status.dart';
+import 'package:whether_app/models/whether_model.dart';
+import 'package:whether_app/screens/Whether_Statues.dart';
+
+import 'Future_builder_statues_whether.dart';
 
 class TextFieldSection extends StatelessWidget {
-  String nameCounty = '';
-  TextFieldSection({super.key});
+  WhetherManger whetherManger = WhetherManger();
+
+  String nameCountry = '';
+  TextFieldSection({
+    super.key,
+  });
 
   @override
   Widget build(BuildContext context) {
     return TextField(
       onChanged: (value) {
-        nameCounty = value;
+        nameCountry = value;
       },
       decoration: InputDecoration(
         labelText:
@@ -19,9 +28,22 @@ class TextFieldSection extends StatelessWidget {
         hintStyle: TextStyle(color: Colors.grey),
 
         // prefixIcon: Icon(Icons.person, color: Colors.blue), //Icon عالشمال قبل ماكتب
-        suffixIcon: Icon(
-          Icons.search,
-          color: Colors.black,
+        suffixIcon: GestureDetector(
+          onTap: () {
+            Navigator.push(
+                context,
+                MaterialPageRoute(
+                    builder: (context) => nameCountry != ''
+                        ? WhetherStatusUi(
+                            whetherManger: whetherManger,
+                            countryName: nameCountry,
+                          )
+                        : WhetherStatues()));
+          },
+          child: Icon(
+            Icons.search,
+            color: Colors.black,
+          ),
         ), //ايقون عاليمين وانا بكتب
         filled: true, // لو true، يتم تلوين خلفية الصندوق
         fillColor: Colors.white, //لون جوه

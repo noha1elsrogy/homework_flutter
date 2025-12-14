@@ -1,9 +1,11 @@
 import 'package:flutter/material.dart';
-import 'package:whether_app/Widgets/whether_status.dart';
+import 'package:whether_app/models/whether_model.dart';
 import 'package:whether_app/screens/search_screen.dart';
 
-class HomeScreen extends StatelessWidget {
-  const HomeScreen({super.key});
+class WhetherStatues extends StatelessWidget {
+  WhetherStatues({
+    super.key,
+  });
 
   @override
   Widget build(BuildContext context) {
