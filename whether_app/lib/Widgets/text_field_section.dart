@@ -1,11 +1,15 @@
 import 'package:flutter/material.dart';
 
 class TextFieldSection extends StatelessWidget {
-  const TextFieldSection({super.key});
+  String nameCounty = '';
+  TextFieldSection({super.key});
 
   @override
   Widget build(BuildContext context) {
     return TextField(
+      onChanged: (value) {
+        nameCounty = value;
+      },
       decoration: InputDecoration(
         labelText:
             "Search", //ده بيظهر لما باجي اكتب وعلي البوردر...وبيظهر الكلمه دي قبل الكتابه برضو
