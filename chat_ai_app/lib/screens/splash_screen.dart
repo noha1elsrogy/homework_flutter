@@ -1,6 +1,7 @@
 import 'dart:async';
 
-import 'package:chat_ai_app/screens/second_screen.dart';
+import 'package:chat_ai_app/screens/welcome_screen.dart';
+
 import 'package:flutter/material.dart';
 import 'package:chat_ai_app/generated/assets.dart'; // لو عندك assets
 
@@ -9,7 +10,6 @@ class SplashScreen extends StatefulWidget {
   _SplashScreenState createState() => _SplashScreenState();
 }
 
-// الكلاس اللي بيحتوي على الحالة (State)
 class _SplashScreenState extends State<SplashScreen> {
   @override
   void initState() {
@@ -19,7 +19,7 @@ class _SplashScreenState extends State<SplashScreen> {
       Duration(seconds: 2),
       () => Navigator.pushReplacement(
         context,
-        MaterialPageRoute(builder: (context) => SecondScreen()),
+        MaterialPageRoute(builder: (context) => WelcomeScreen()),
       ),
     );
   }

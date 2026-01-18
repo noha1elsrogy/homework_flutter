@@ -11,9 +11,9 @@ class AppTextStyles {
     );
   }
 
-  static TextStyle grayNunito15Normal() {
-    return const TextStyle(
-      color: Color.fromRGBO(117, 117, 117, 1),
+  static TextStyle grayNunito15Normal(Color color2) {
+    return TextStyle(
+      color: color2,
       fontFamily: 'Nunito',
       fontSize: 15,
       letterSpacing: 0,

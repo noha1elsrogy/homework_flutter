@@ -18,7 +18,7 @@ class WelcomeText extends StatelessWidget {
           padding: const EdgeInsets.symmetric(horizontal: 30),
           child: Text(
             'Using this software,you can ask you questions and receive articles using artificial intelligence assistant ',
-            style: AppTextStyles.grayNunito15Normal(),
+            style: AppTextStyles.grayNunito15Normal(Colors.grey),
             textAlign: TextAlign.center,
           ),
         ),
