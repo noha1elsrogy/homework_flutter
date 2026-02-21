@@ -1,4 +1,3 @@
-import 'package:auth_app/views/signup_view.dart';
 import 'package:flutter/material.dart';
 
 class Footer extends StatelessWidget {

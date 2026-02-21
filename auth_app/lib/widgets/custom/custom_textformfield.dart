@@ -3,26 +3,29 @@ import 'package:flutter/material.dart';
 class CustomTextFormField extends StatelessWidget {
   final String labelText;
   final Widget prefixIcon;
-  final Widget? suffixIcon;
-  final bool? obscureText;
+  final void Function(String?)? onchanged;
+  // final Widget? suffixIcon;
+  // final bool? obscureText;
   const CustomTextFormField({
     super.key,
 
     required this.labelText,
     required this.prefixIcon,
-    this.suffixIcon,
-    this.obscureText,
+    required this.onchanged,
+    // this.suffixIcon,
+    // this.obscureText,
   });
 
   @override
   Widget build(BuildContext context) {
     return TextFormField(
-      obscureText: obscureText ?? false,
+      onChanged: onchanged,
+      // obscureText: obscureText ?? false,
       keyboardType: TextInputType.emailAddress,
       decoration: InputDecoration(
         labelText: labelText,
         prefixIcon: prefixIcon,
-        suffixIcon: suffixIcon,
+        // suffixIcon: suffixIcon,
 
         // prefixIcon: const Icon(Icons.email_outlined),
         border: OutlineInputBorder(borderRadius: BorderRadius.circular(12)),

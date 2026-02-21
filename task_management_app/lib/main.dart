@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:task_management_app/Home_page.dart';
 
 void main() {
+  //await Hive.initFlutter();
   runApp(const TaskApp());
 }
 

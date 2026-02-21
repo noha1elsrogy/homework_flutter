@@ -6,34 +6,36 @@ class Help extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Column(
-      mainAxisAlignment: MainAxisAlignment.center,
-      children: [
-        Image.asset(Assets.imagesExplainIcon),
+    return SingleChildScrollView(
+      child: Column(
+        mainAxisAlignment: MainAxisAlignment.center,
+        children: [
+          Image.asset(Assets.imagesExplainIcon),
 
-        SizedBox(height: 18),
-        CusomContainerHelp(text: 'Explain Quantum physics'),
-        SizedBox(height: 8),
-        CusomContainerHelp(text: 'What are wormholes explain like i am 5'),
+          SizedBox(height: 18),
+          CusomContainerHelp(text: 'Explain Quantum physics'),
+          SizedBox(height: 8),
+          CusomContainerHelp(text: 'What are wormholes explain like i am 5'),
 
-        SizedBox(height: 18),
-        Image.asset(Assets.imagesExplainIcon),
+          SizedBox(height: 18),
+          Image.asset(Assets.imagesExplainIcon),
 
-        SizedBox(height: 18),
-        CusomContainerHelp(text: 'Write a tweet about global warming'),
+          SizedBox(height: 18),
+          CusomContainerHelp(text: 'Write a tweet about global warming'),
 
-        SizedBox(height: 8),
-        CusomContainerHelp(text: 'Write a poem about flower and love'),
+          SizedBox(height: 8),
+          CusomContainerHelp(text: 'Write a poem about flower and love'),
 
-        SizedBox(height: 8),
-        CusomContainerHelp(text: 'Write a rap song lyrics about'),
+          SizedBox(height: 8),
+          CusomContainerHelp(text: 'Write a rap song lyrics about'),
 
-        SizedBox(height: 18),
-        Image.asset(Assets.imagesTranslateIcon),
+          SizedBox(height: 18),
+          Image.asset(Assets.imagesTranslateIcon),
 
-        SizedBox(height: 18),
-        CusomContainerHelp(text: 'How do you say “how are you” in korean?'),
-      ],
+          SizedBox(height: 18),
+          CusomContainerHelp(text: 'How do you say “how are you” in korean?'),
+        ],
+      ),
     );
   }
 }

@@ -8,8 +8,8 @@ class ChatInitial extends ChatState {}
 class ChatLoading extends ChatState {}
 
 class ChatSuccess extends ChatState {
-  final List<ChatModel> chatList; // كل الرسائل
-  ChatSuccess({required this.chatList});
+  final ChatModel chatModel; // كل الرسائل
+  ChatSuccess({required this.chatModel});
 }
 
 class ChatFilure extends ChatState {

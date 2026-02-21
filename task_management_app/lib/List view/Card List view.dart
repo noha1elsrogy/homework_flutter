@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:task_management_app/models/Task%20App%20oop.dart';
+import 'package:task_management_app/models/task_model.dart';
+import 'package:task_management_app/models/task_manager.dart';
 
 class CardListView extends StatefulWidget {
   final Task task;

@@ -17,7 +17,7 @@ class ChatCubit extends Cubit<ChatState> {
         dio: Dio(),
       ).sendMessage(messages: messages);
       messages.add(chatModel); // Add the model's response to the list
-      emit(ChatSuccess(chatList: messages));
+      emit(ChatSuccess(chatModel: chatModel));
     } catch (e) {
       emit(ChatFilure(error: e.toString()));
     }

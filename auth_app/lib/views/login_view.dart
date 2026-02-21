@@ -1,4 +1,4 @@
-import 'package:auth_app/cubit/login_cubit.dart';
+import 'package:auth_app/cubit/login_cubit/login_cubit.dart';
 import 'package:auth_app/views/signup_view.dart';
 import 'package:auth_app/widgets/footer.dart';
 import 'package:auth_app/widgets/header._welcome.dart';

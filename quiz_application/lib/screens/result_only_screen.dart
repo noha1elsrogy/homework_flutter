@@ -14,20 +14,24 @@ class ResultOnlyScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body: SafeArea(
-        child: Center(
-          child: Padding(
-            padding: const EdgeInsets.symmetric(horizontal: 28),
-            child: Column(
-              mainAxisSize: MainAxisSize.min,
-              children: [
-                Text(
-                  'your Score .....${questionManager.totaldegreefunction(question)}',
-                ),
-              ],
+      body: Stack(
+        children: [
+          Container(
+            decoration: const BoxDecoration(
+              gradient: LinearGradient(
+                begin: Alignment.topLeft,
+                end: Alignment.bottomRight,
+                colors: [Color(0xFF060B26), Color(0xff1A1F37)],
+              ),
             ),
           ),
-        ),
+          Center(
+            child: Text(
+              'Your Score: ${questionManager.totaldegreefunction(question)}',
+              style: const TextStyle(color: Colors.white, fontSize: 24),
+            ),
+          ),
+        ],
       ),
     );
   }

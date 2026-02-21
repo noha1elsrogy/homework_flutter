@@ -4,6 +4,7 @@ import 'package:chat_ai_app/styles/text_style_app.dart';
 import 'package:flutter/material.dart';
 
 class CustomButtonContinue extends StatelessWidget {
+  // final ChatModel chatModel;
   // final ChatService chatService;
   const CustomButtonContinue({super.key});
 

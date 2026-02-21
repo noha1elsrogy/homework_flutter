@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:task_management_app/models/Task%20App%20oop.dart';
+import 'package:task_management_app/models/task_model.dart';
+import 'package:task_management_app/models/task_manager.dart';
 
 class taskInputFieldSection extends StatefulWidget {
   TaskManager taskManager;
@@ -15,6 +16,7 @@ class taskInputFieldSection extends StatefulWidget {
 }
 
 class _taskInputFieldSectionState extends State<taskInputFieldSection> {
+  TextEditingController _controller = TextEditingController();
   String taskTitle = '';
   @override
   Widget build(BuildContext context) {
@@ -26,6 +28,7 @@ class _taskInputFieldSectionState extends State<taskInputFieldSection> {
         children: [
           Expanded(
             child: TextField(
+              controller: _controller,
               onChanged: (value) {
                 taskTitle = value;
               },
@@ -57,7 +60,10 @@ class _taskInputFieldSectionState extends State<taskInputFieldSection> {
                 isCompleted: false,
               );
               widget.taskManager.addTask(task: task);
+              _controller.clear();
+
               widget.onChanged();
+              // setState(() {});
             },
             child: Padding(
               padding: const EdgeInsets.all(8.0),

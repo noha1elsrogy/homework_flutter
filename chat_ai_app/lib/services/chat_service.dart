@@ -1,10 +1,8 @@
 // i        mport 'package:chat_ai_app/models/chat_model.dart';
 // import 'package:dio/dio.dart';
-
 // class ChatService {
 //   final Dio dio;
 //   ChatService({required this.dio});
-
 //   Future<ChatModel> getMessage({required String messageUser}) async {
 //     Response response = await dio.post(
 //       'https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent',
@@ -26,7 +24,6 @@
 //         },
 //       ),
 //     );
-
 //     final chat = ChatModel.fromJson(response.data, messageUser);
 //     return chat;
 //   }
@@ -62,7 +59,7 @@ class ChatService {
         },
         headers: {
           "Content-Type": "application/json",
-          "x-goog-api-key": "AIzaSyAKVR8lYGCP-8P6qAh15_tWDDClFb51Rdo",
+          "x-goog-api-key": "AIzaSyASu96f1jaZJkpH-HoKauyRHI_68zjzxWk",
         },
       );
       // Safely parse the response from the Gemini API

@@ -1,22 +1,22 @@
 import 'dart:async';
-
+import 'package:chat_ai_app/models/chat_model.dart';
 import 'package:chat_ai_app/screens/welcome_screen.dart';
-
 import 'package:flutter/material.dart';
-import 'package:chat_ai_app/generated/assets.dart'; // لو عندك assets
 
 class SplashScreen extends StatefulWidget {
+  // final  ChatModel chatModel;
+
+  const SplashScreen({super.key});
   @override
-  _SplashScreenState createState() => _SplashScreenState();
+  State<SplashScreen> createState() => _SplashScreenState();
 }
 
 class _SplashScreenState extends State<SplashScreen> {
   @override
   void initState() {
     super.initState();
-
     Timer(
-      Duration(seconds: 2),
+      const Duration(seconds: 2),
       () => Navigator.pushReplacement(
         context,
         MaterialPageRoute(builder: (context) => WelcomeScreen()),
@@ -29,7 +29,10 @@ class _SplashScreenState extends State<SplashScreen> {
     return Scaffold(
       backgroundColor: Colors.blue,
       body: Center(
-        child: Image.asset(Assets.imagesSplashScreenImg, fit: BoxFit.fill),
+        child: Image.asset(
+          'assets/images/splash_screen_img.png',
+          fit: BoxFit.fill,
+        ),
       ),
     );
   }
